@@ -34,4 +34,13 @@ public class FizzBuzzTest {
 
         assertEquals(expected, actual);
         }
+
+    @Test
+    public void should_return_none_with_number_less_than_or_equal_to_0() {
+        int number = 0;
+        String expected = "";
+        String actual = FizzBuzz.fizzBuzz(number);
+
+        assertEquals(expected, actual);
+    }
 }
