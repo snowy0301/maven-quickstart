@@ -1,21 +1,24 @@
 package samsungtdd;
 
-public class FizzBuzz {
-    static String fizzBuzz(int number) {
-        if (number <= 0) return "";
-        StringBuilder sb = new StringBuilder();
+import java.util.ArrayList;
+import java.util.List;
 
+
+public class FizzBuzz {
+    static List<String> fizzBuzz(int number) {
+        if (number <= 0) throw new ArrayIndexOutOfBoundsException();
+        List<String> result = new ArrayList<>();
         for (int i = 1; i <= number; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
-                sb.append("FizzBuzz ");
+                result.add("FizzBuzz");
             } else if (i % 3 == 0) {
-                sb.append("Fizz ");
+                result.add("Fizz");
             } else if (i % 5 == 0) {
-                sb.append("Buzz ");
+                result.add("Buzz");
             } else {
-                sb.append(i).append(" ");
+                result.add(String.valueOf(i));
             }
         }
-        return sb.deleteCharAt(sb.length() - 1).toString();
+        return result;
     }
 }
