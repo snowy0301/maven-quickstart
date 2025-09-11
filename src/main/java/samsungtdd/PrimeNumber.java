@@ -14,7 +14,7 @@ public class PrimeNumber {
             return false;
         }
 
-        for (int i = 3; i * i <= number; i++) {
+        for (int i = 3; i * i <= number; i+=2) {
             if (number % i == 0) {
                 return false;
             }
